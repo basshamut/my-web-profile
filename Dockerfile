@@ -3,6 +3,7 @@ FROM node:22-slim AS builder
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
+    unzip \
     libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 \
     libcups2 libdrm2 libdbus-1-3 libxkbcommon0 \
     libxcomposite1 libxdamage1 libxfixes3 libxrandr2 \
