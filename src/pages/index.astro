@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { profile, skills, experience, projects, education, certifications } from '../data/profile.js';
+---
+<Layout>
+  <div id="top"></div>
+
+  <section class="hero">
+    <div class="container">
+      <p class="terminal-prompt">whoami</p>
+      <h1>{profile.name}</h1>
+      <p class="role">{profile.role}</p>
+      <p>{profile.summary}</p>
+      <div class="actions">
+        <a class="btn btn-primary" href={profile.cv} download>↓ Descargar CV (PDF)</a>
+        <a class="btn" href={`mailto:${profile.email}`}>✉ Contacto</a>
+        <a class="btn" href={profile.linkedin} target="_blank" rel="noopener">in/ LinkedIn</a>
+        <a class="btn" href={profile.github} target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+        <a class="btn" href={profile.roadmap} target="_blank" rel="noopener">🗺 roadmap.sh</a>
+      </div>
+      <p class="contact">
+        {profile.location}<span class="sep">·</span>
+        <a href={`mailto:${profile.email}`}>{profile.email}</a><span class="sep">·</span>
+        {profile.phone}
+      </p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2>// experiencia</h2>
+      {experience.map((e) => (
+        <div class="item">
+          <div class="row">
+            <h3>{e.role} <span class="muted">— {e.company}</span></h3>
+            <span class="muted mono">{e.period}</span>
+          </div>
+          <p class="muted mono" style="font-size:0.8rem; margin: 0.2rem 0 0.5rem;">{e.location}</p>
+          <p>{e.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>// proyectos frelance</h2>
+      {projects.map((p) => (
+        <div class="item">
+          <div class="row">
+            <h3>{p.name}</h3>
+            <span class="muted mono" style="font-size:0.78rem;">{p.stack}</span>
+          </div>
+          <p>{p.description}</p>
+          {p.links.length > 0 && (
+            <div class="links">
+              {p.links.map((l) => (
+                <a href={l.url} target="_blank" rel="noopener">
+                  {l.url.includes('github.com') ? (
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:-2px"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                  ) : <span>↗</span>}
+                  {l.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>// stack técnico</h2>
+      <div class="skills-grid">
+        {skills.map((g) => (
+          <div class="skill-block">
+            <h3>{g.title}</h3>
+            <div>{g.items.map((s) => <span class="tag">{s}</span>)}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2>// educación</h2>
+      {education.map((e) => (
+        <div class="item">
+          <div class="row">
+            <h3>{e.degree}</h3>
+            <span class="muted mono">{e.period}</span>
+          </div>
+          <p class="muted">{e.school}</p>
+        </div>
+      ))}
+      <h2 style="margin-top:2rem;">// certificaciones</h2>
+      <div>{certifications.map((c) => <span class="tag">{c}</span>)}</div>
+    </div>
+  </section>
+</Layout>

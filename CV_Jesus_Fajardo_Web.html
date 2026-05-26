@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jesús Fajardo — CV</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;color:#222;margin:0;padding:30px;}
+    .container{max-width:850px;margin:0 auto}
+    header{text-align:center;margin-bottom:10px}
+    h1{font-size:28px;margin:6px 0;color:#1f497d}
+    .subtitle{color:#666;margin-bottom:6px}
+    .contact{color:#666;font-size:13px;margin-bottom:16px}
+    hr{border:none;border-top:2px solid #e0e6ef;margin:18px 0}
+    .section-title{color:#1f497d;font-size:18px;margin:18px 0 8px}
+    .profile,.exp-item li,section li{font-size:13px;line-height:1.45;color:#333;margin:6px 0}
+    .grid{display:flex;gap:20px}
+    .left{flex:1}
+    .right{flex:1}
+    table.skills{width:100%;border-collapse:collapse;margin-top:8px}
+    table.skills td{vertical-align:top;padding:10px;border:1px solid #ddd}
+    table.skills td.label{width:30%;background:#f5f8ff;font-weight:bold;color:#1f497d}
+    ul{margin:8px 0 12px 18px}
+    .exp-item{margin-bottom:12px}
+    .exp-item h3{margin:0;font-size:15px;color:#0f3c6b}
+    .exp-item .meta{font-size:12px;color:#666;margin-bottom:6px}
+    .footer-note{font-size:11px;color:#666;margin-top:20px}
+    a{color:#1f497d;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .theme-btn{position:fixed;top:12px;right:12px;background:#1f497d;color:#fff;border:none;border-radius:4px;padding:6px 10px;cursor:pointer;font-size:12px;z-index:10}
+    .theme-btn:hover{background:#14305a}
+    body.dark{background:#121212;color:#e0e0e0}
+    body.dark h1,body.dark .section-title,body.dark a{color:#6a9fd8}
+    body.dark hr{border-top-color:#2a2a2a}
+    body.dark .subtitle,body.dark .contact,body.dark .meta{color:#aaa}
+    body.dark .profile,body.dark .exp-item li,body.dark section li{color:#ccc}
+    body.dark table.skills td{border-color:#333}
+    body.dark table.skills td.label{background:#1a1a2e;color:#6a9fd8}
+    body.dark .exp-item h3{color:#6a9fd8}
+    body.dark .theme-btn{background:#6a9fd8;color:#121212}
+  </style>
+</head>
+<body>
+  <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
+  <div class="container">
+    <header>
+      <h1>Jesús Fajardo</h1>
+      <div class="subtitle">Senior Software Engineer | Backend & Full Stack Developer</div>
+      <div class="contact">Barcelona, España · +34 671 170 577 · jesfaj7@gmail.com · linkedin.com/in/jesus-fajardo-46873817</div>
+    </header>
+    <hr />
+
+    <section>
+      <div class="section-title">Perfil Profesional</div>
+      <div class="profile">Ingeniero de Software Full-Stack Senior con sólida experiencia en la construcción de aplicaciones empresariales escalables y de alto rendimiento. Especialista en el desarrollo backend con el ecosistema Java y Spring Boot, combinado con el diseño de interfaces modernas, dinámicas y eficientes en el frontend utilizando React y JavaScript. Poseo un profundo conocimiento en el ciclo de vida completo del dato, desde la minería y procesamiento a gran escala hasta la optimización de búsquedas y mensajería con ElasticSearch y RabbitMQ. Con experiencia en entornos cloud (AWS) y automatización de despliegues, trabajando en equipos con cultura DevOps. Profesional pragmático, enfocado en la mantenibilidad del software, la aplicación de principios SOLID, el diseño técnico de servicios REST y la entrega continua de valor al negocio.</div>
+    </section>
+
+    <section>
+      <div class="section-title">Competencias Técnicas</div>
+      <table class="skills">
+        <tr>
+          <td class="label">Lenguajes & Backend</td>
+          <td>Java (8/11/17/21), Kotlin, Groovy, Spring Boot 3, Spring Security, Spring Data, Spring Mail, Node.js, PHP, Python. APIs RESTful, Web Services (OSB/Java), microservicios, API Gateway, arquitecturas multi-tenant.</td>
+        </tr>
+        <tr>
+          <td class="label">Frontend</td>
+          <td>React 18/19, TypeScript, Angular, Vue.js 2, JavaScript, HTML5, CSS3. Vite, Redux Toolkit, TanStack Query, Zustand, React Router, PrimeReact, AdminLTE 3, PrimeFaces/JSF, TailwindCSS, Astro, Leaflet, PWA, Capacitor.</td>
+        </tr>
+        <tr>
+          <td class="label">Bases de Datos</td>
+          <td>PostgreSQL, MySQL, MongoDB, Oracle (9g/10g/11g), SQL Server, DB2, Redis, ElasticSearch. Flyway, PL/SQL. Modelado y optimización de bases relacionales y no relacionales.</td>
+        </tr>
+        <tr>
+          <td class="label">Cloud & Infraestructura</td>
+          <td>AWS (EC2, S3, Lambda, EKS), GCP (Cloud Run, Cloud SQL), Docker, Kubernetes, OpenShift, Koyeb, Vercel, Supabase.</td>
+        </tr>
+        <tr>
+          <td class="label">CI/CD & DevOps</td>
+          <td>GitLab CI/CD, Jenkins, GitHub Actions, Bamboo. Git, SVN. Apache Server, Oracle WebLogic Server.</td>
+        </tr>
+        <tr>
+          <td class="label">Testing, Documentación & Monitoreo</td>
+          <td>JUnit 4/5, Mockito, Cucumber. Swagger/OpenAPI, Prometheus + Actuator. Pruebas unitarias, de integración y monitoreo de APIs.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <div class="section-title">Experiencia Profesional</div>
+
+      <div class="exp-item">
+        <h3>Ingeniero de Software – Altia</h3>
+        <div class="meta">Julio 2025 – Actualidad | Barcelona, España</div>
+        <p class="profile">Ingeniero de software full-stack participando en el diseño, desarrollo y despliegue de aplicaciones empresariales con arquitectura de microservicios. Desarrollo backend con Java (Spring Boot) y Node.js, frontend con Angular, y automatización de despliegues en contenedores Docker y Kubernetes mediante pipelines CI/CD. Proyectos para clientes como Kids and Us y Madrid Digital.</p>
+      </div>
+
+      <div class="exp-item">
+        <h3>Java Developer – SILENCE Urban Ecomobility</h3>
+        <div class="meta">Diciembre 2024 – Junio 2025 | Barcelona, España</div>
+        <p class="profile">Desarrollador backend encargado de la implementación y mantenimiento de servicios RESTful con Java y Spring Boot, desplegados como microservicios en clústeres Kubernetes con bases de datos multi-tenant en GCP. Aplicación de prácticas de calidad con pruebas unitarias (JUnit) y de integración (Mockito) para garantizar la robustez del sistema.</p>
+      </div>
+
+      <div class="exp-item">
+        <h3>Senior Software Engineer – NTT DATA</h3>
+        <div class="meta">Enero 2019 – Diciembre 2024 | Barcelona, España</div>
+        <p class="profile">Ingeniero senior contribuyendo al desarrollo de soluciones backend empresariales con Java y Spring Framework, abarcando el diseño técnico y funcional de módulos, optimización de rendimiento con Redis como capa de caché, y automatización de pipelines CI/CD (Jenkins, Bamboo, GitHub Actions) en entornos cloud con AWS. Participación en proyectos para clientes como SEAT, Correos, ULMA e INDITEX.</p>
+      </div>
+
+      <div class="exp-item">
+        <h3>Developer – Posma Group / Neuvoo</h3>
+        <div class="meta">Octubre 2013 – Marzo 2019 | Caracas, Venezuela</div>
+        <p class="profile">Desarrollador full-stack responsable de la minería y procesamiento de datos a gran escala con CasperJS y PHP, desarrollo de nuevas funcionalidades web (módulos, servicios REST, scripts), y administración de infraestructura en Apache Server. Stack tecnológico variado: PHP, JavaScript, ElasticSearch, RabbitMQ y MySQL.</p>
+      </div>
+
+      <div class="exp-item">
+        <h3>Java Developer – Infosoft</h3>
+        <div class="meta">Abril 2013 - Octubre 2013 | Venezuela</div>
+        <p class="profile">Desarrollador Java centrado en la creación de Web Services corporativos sobre Oracle WebLogic (OSB/Java), abarcando tanto front-end con JSF 2.0 y PrimeFaces como back-end con Java, Spring Framework y PL/SQL para el cliente Mercantil Seguros. Control de versiones con SVN y desarrollo bajo metodologías estructuradas.</p>
+      </div>
+
+      <div class="exp-item">
+        <h3>Consultor e Integrador de Sistemas – TCS</h3>
+        <div class="meta">Abril 2008 – Abril 2013 | Venezuela</div>
+        <p class="profile">Consultor e integrador de sistemas con responsabilidad en el desarrollo completo de soluciones Java y Oracle para los clientes Movilnet, Digitel y Movistar, desde Web Services (OSB/Java) y aplicaciones JSF hasta base de datos PL/SQL. Combinación de roles técnicos con estimación de proyectos en MS Project y coordinación de equipos de trabajo.</p>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="section-title">Proyectos Personales</div>
+
+      <div class="exp-item">
+        <h3>SIPRO (Servicios Integrales PRO)</h3>
+        <div class="meta">Java / Spring Boot · ReactJS</div>
+        <ul>
+          <li>Plataforma web para la compra de planes de facturación usando Greenpay.</li>
+          <li>Backend desarrollado con Java y Spring Boot exponiendo APIs RESTful; frontend construido con ReactJS.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <h3>OpenEduGo</h3>
+        <div class="meta">Java 17 / Spring Boot 3.4 · React 19 / Vite / PrimeReact</div>
+        <ul>
+          <li>Sistema de gestión educativa full-stack con arquitectura de microservicios (microlito). Backend en Java 17 + Spring Boot 3.4, autenticación JWT, Spring Security, Flyway para migraciones PostgreSQL, pruebas con Mockito y documentación Swagger/OpenAPI.</li>
+          <li>Frontend SPA en React 19 + Vite con PrimeReact, React Router v7, autenticación con OTP y recuperación de contraseña.</li>
+          <li>Gestiona módulos: académico (estudiantes, docentes, materias, horarios, calificaciones, asistencia), administrativo (matrículas, tutorías, sucursales) y financiero (facturación, pagos, tipos de cambio).</li>
+        </ul>
+        <ul>
+          <li>Frontend: <a href="https://github.com/Undergrub/ft_openedugo">github.com/Undergrub/ft_openedugo</a></li>
+          <li>Backend API: <a href="https://github.com/Undergrub/bk_openedugo">github.com/Undergrub/bk_openedugo</a></li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <h3>Virtual Karate Dojo (Mushin Dojo)</h3>
+        <div class="meta">Kotlin / Spring Boot 3 · React 18 / PrimeReact</div>
+        <ul>
+          <li>Full-stack web platform para la venta y gestión de clases de karate online. Frontend con React 18 + PrimeReact; API REST con Kotlin + Spring Boot 3 + MongoDB.</li>
+          <li>Integra Stripe Checkout para pagos, Cloudinary para imágenes, Spring Mail para notificaciones automáticas (bienvenida, recordatorios), BCrypt + Basic Auth y rate limiting con Caffeine.</li>
+          <li>Panel admin con tabla de compras paginada y filtrable, subida de imágenes vía multipart. Backend documentado con Swagger/OpenAPI, monitoreo con Prometheus + Actuator, y pruebas con Cucumber.</li>
+        </ul>
+        <ul>
+          <li>Frontend: <a href="https://github.com/basshamut/virtual-karate-dojo">github.com/basshamut/virtual-karate-dojo</a></li>
+          <li>Backend API: <a href="https://github.com/basshamut/virtual-karate-dojo-api">github.com/basshamut/virtual-karate-dojo-api</a></li>
+        </ul>
+      </div>
+      
+      <div class="exp-item">
+        <h3>ResiManager</h3>
+        <div class="meta">Java 21 / Spring Boot 3 · React 19 / Vite / AdminLTE 3</div>
+        <ul>
+          <li>Plataforma web full-stack para la gestión integral de condominios y conjuntos residenciales con arquitectura multi-tenant y control de acceso RBAC.</li>
+          <li>Backend con Java 21, Spring Boot 3, Spring Security (JWT + HttpOnly Cookies), PostgreSQL, Flyway; API REST desplegada en Koyeb.</li>
+          <li>Frontend con React 19, Vite, AdminLTE 3, React Router 7; SPA desplegada en Vercel.</li>
+          <li>Funcionalidades: autenticación, gestión de usuarios/perfiles/módulos con permisos granulares, administradoras, conjuntos, propiedades, flujo de invitaciones y menú dinámico adaptativo.</li>
+        </ul>
+        <ul>
+          <li>Frontend SPA: <a href="https://github.com/Floor5AndHalfSoftware/resimanager-spa">github.com/Floor5AndHalfSoftware/resimanager-spa</a></li>
+          <li>Backoffice: <a href="https://github.com/Floor5AndHalfSoftware/resimanager-backoffice">github.com/Floor5AndHalfSoftware/resimanager-backoffice</a></li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <h3>Grúas Tre-Mart</h3>
+        <div class="meta">Java 21 / Spring Boot 3 · React / Vite · Astro / TailwindCSS</div>
+        <ul>
+          <li>Plataforma full-stack para gestión de servicios de grúas vehiculares. Incluye una SPA en React + Vite con mapas interactivos (Leaflet), autenticación con Supabase, sistema de precios inteligente por peso/distancia, y app móvil Android con Capacitor.</li>
+          <li>Backend como API REST en Java 21 + Spring Boot 3 con MongoDB, geolocalización, y despliegue en contenedores Docker.</li>
+          <li>Landing page con Astro + TailwindCSS.</li>
+        </ul>
+        <ul>
+          <li>Landing Page: <a href="https://github.com/basshamut/gruas-tremart-landing">github.com/basshamut/gruas-tremart-landing</a></li>
+          <li>Frontend SPA: <a href="https://github.com/basshamut/gruastremart-spa">github.com/basshamut/gruastremart-spa</a></li>
+          <li>Backend API: <a href="https://github.com/basshamut/gruastremart-core-api">github.com/basshamut/gruastremart-core-api</a></li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <h3>Atomo Gaming</h3>
+        <div class="meta">Java 21 / Spring Boot 3 · React 18/19 / TypeScript / Vite</div>
+        <ul>
+          <li>Plataforma multi-marca de casino, apuestas deportivas y lotería online (Ecuador, Panamá, Centroamérica). Desarrollo full-stack con microservicios backend en Java 21 / Groovy con Spring Boot 3 (API Gateway, core, pagos, juegos, reportes, CMS, jobs) y frontends React 18/19 con TypeScript, Vite, Modern.js, Redux Toolkit, TanStack Query, PrimeReact y TailwindCSS.</li>
+          <li>Migración de monolitos Spring Boot con Vue.js 2 embebido a arquitectura desacoplada: frontends React standalone + API Gateway unificado (bet-gateway) + microservicios plasma-*. Refactor de Vuex a Redux Toolkit / Zustand, implementación de PWA, integración con APIs REST y WebSockets, y migración progresiva de Vue 2 a React.</li>
+          <li>Despliegue en AWS EKS con GitLab CI. Integraciones con proveedores de pagos (10+), KYC (Sumsub), CRM (Smartico), juegos (Pragmatic, Evolution, GoldenRace) y apuestas deportivas (Altenar).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Educación</div>
+      <div class="profile">IUT-RC “Dr. Federico Rivero Palacio” — T.S.U en Análisis y Diseño de Sistemas (2002 – 2007)</div>
+    </section>
+
+    <section>
+      <div class="section-title">Certificaciones</div>
+      <ul>
+        <li>Curso RESTful Java Spring Boot</li>
+        <li>Desarrollo Web con Spring 4</li>
+        <li>AWS Curso Básico para Desarrolladores Web</li>
+        <li>Docker for the Absolute Beginner – Hands On – DevOps</li>
+        <li>Curso Básico de MongoDB</li>
+      </ul>
+    </section>
+  </div>
+<script>
+(function(){const p=localStorage.getItem('theme');if(p){if(p==='dark'){document.body.classList.add('dark')}}else if(window.matchMedia('(prefers-color-scheme:dark)').matches){document.body.classList.add('dark')}
+document.getElementById('themeBtn').textContent=document.body.classList.contains('dark')?'☀️':'🌙'}())
+function toggleTheme(){const b=document.body;b.classList.toggle('dark');document.getElementById('themeBtn').textContent=b.classList.contains('dark')?'☀️':'🌙';localStorage.setItem('theme',b.classList.contains('dark')?'dark':'light')}
+</script>
+</body>
+</html>
